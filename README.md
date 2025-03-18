@@ -21,6 +21,13 @@ A new startup, Reactive weather, has hired you to build a web application that r
     npm install
     npm start
     ```
+    Note: If you get a parcel error in the browser console upon running, try the following commands to reinstall parcel and start the app. Be sure to delete any generated directories before installing dependencies (`node_modules`, `dist`, `.parcel-cache`, `package-lock.json`)
+    ```
+    npm uninstall parcel
+    npm install parcel@2.8.3
+    npm install
+    npm start
+    ```
 2. In `WeatherCard.js`, a card has been made for you, but hasn't been exported. Export the card using `module.exports`.
 3. In `App.js`, import:
     - The `cities` array from `data.js`.
