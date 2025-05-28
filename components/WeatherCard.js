@@ -1,9 +1,9 @@
 import React from "react";
 // Import all weather icons
-import sunny from "../assets/Sunny.svg";
-import rainy from "../assets/Rainy.svg";
-import cloudy from "../assets/Cloudy.svg";
-import partlyCloudy from "../assets/PartlyCloudy.svg";
+import sunny from "url:../assets/Sunny.svg";
+import rainy from "url:../assets/Rainy.svg";
+import cloudy from "url:../assets/Cloudy.svg";
+import partlyCloudy from "url:../assets/PartlyCloudy.svg";
 
 
 
