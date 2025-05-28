@@ -5,33 +5,31 @@ import rainy from "url:../assets/Rainy.svg";
 import cloudy from "url:../assets/Cloudy.svg";
 import partlyCloudy from "url:../assets/PartlyCloudy.svg";
 
-
+export const getWeatherIcon = (forecast) => {
+  switch (forecast.toLowerCase()) {
+    case 'sunny':
+      return sunny;
+    case 'rainy':
+      return rainy;
+    case 'cloudy':
+      return cloudy;
+    case 'partly cloudy':
+      return partlyCloudy;
+    default:
+      return sunny; 
+  }
+};
 
 function WeatherCard({ data }) {
-  const getWeatherIcon = (forecast) => {
-    switch (forecast.toLowerCase()) {
-      case 'sunny':
-        return sunny;
-      case 'rainy':
-        return rainy;
-      case 'cloudy':
-        return cloudy;
-      case 'partly cloudy':
-        return partlyCloudy;
-      default:
-        return sunny; 
-    }
-  };
-
   return (
     <div className="card">
       <div className="img-container">
-      <img 
-  className="card-img-top" 
-  src={getWeatherIcon(data.forecast)} 
-  alt={`${data.forecast} weather`} 
-  id="icon"
-/>
+        <img 
+          className="card-img-top" 
+          src={getWeatherIcon(data.forecast)} 
+          alt={`${data.forecast} weather`} 
+          id="icon"
+        />
       </div>
       <div className="card-body">
         <h3 className="card-title">{data.city}</h3>
